@@ -33,6 +33,15 @@ async function checkWeather(city) {
     }
 }
 
+function emptycheck() {
+    if(document.querySelector(".search input").value === ""){
+        document.querySelector(".search button").disabled = true;
+    }
+    else {
+        document.querySelector(".search button").disabled = false;
+    }
+  }
+
 searchBtn.addEventListener("click", ()=>{
     checkWeather(searchBox.value);
 })
